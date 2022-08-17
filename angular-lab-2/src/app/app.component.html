@@ -1,0 +1,14 @@
+
+<h1>Welcome to {{ title }} !</h1>
+<p>Number of Players is {{players.length}}</p>
+
+
+<div>
+  <ul>
+    <li *ngFor="let currentPlayer of players">
+      {{currentPlayer.name}} ({{currentPlayer.sport}})
+      <p *ngIf="currentPlayer.active">is active</p>
+      <p *ngIf="!currentPlayer.active">is not active</p>
+    </li>
+  </ul>
+</div>
